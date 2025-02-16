@@ -56,10 +56,13 @@ Step 4: Run the script
 In the CLI type
 python3 setup_nba_data_lake.py
 -You should see the resources were successfully created, the sample data was uploaded successfully and the Data Lake Setup Completed
+![image](https://github.com/user-attachments/assets/9de9952e-7a2e-4949-be9b-cf5683b6f47f)
+
 
 Step 5: Manually Check For The Resources
 In the Search Bar, type S3 and click blue hyper link name
 -You should see 2 General purpose bucket named "Sports-analytics-data-lake"
+
 
 -When you click the bucket name you will see 3 objects are in the bucket
 
@@ -68,12 +71,36 @@ Click on raw-data and you will see it contains "nba_player_data.json"
 Click the file name and at the top you will see the option to Open the file
 
 -You'll see a long string of various NBA data
+![image](https://github.com/user-attachments/assets/5add67cf-04b6-4721-9441-8cb6a00b58c1)
+![image](https://github.com/user-attachments/assets/b0f5dfd4-8d6c-46f3-8b7a-bf25665138c0)
+![image](https://github.com/user-attachments/assets/a6976a20-1281-411a-a27d-c588f15bc905)
+![image](https://github.com/user-attachments/assets/c3e60837-72ed-4a76-bcd1-d6e844fd2def)
+
+
 
 Head over to Amazon Athena and you could paste the following sample query:
+![image](https://github.com/user-attachments/assets/2ab17021-a673-45ef-9ad0-b639a7feef13)
+
+![image](https://github.com/user-attachments/assets/8c677fa3-2571-403f-a202-398883f076d3)
+
+![image](https://github.com/user-attachments/assets/908bd554-aacd-40f8-b04e-863325768889)
+
+
+
+
 SELECT FirstName, LastName, Position, Team
 FROM nba_players
 WHERE Position = 'PG';
 -Click Run -You should see an output if you scroll down under "Query Results"
+
+![image](https://github.com/user-attachments/assets/98b45536-0341-4549-a22a-2843111694ac)
+![image](https://github.com/user-attachments/assets/60a83cdf-975b-4794-8eb5-7b6d04cccdf9)
+
+![image](https://github.com/user-attachments/assets/95dba0a6-0d39-4b36-873c-f8c855bcc4f7)
+
+
+
+
 
 What We Learned
 Securing AWS services with least privilege IAM policies.
