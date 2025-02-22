@@ -1,12 +1,12 @@
-NBADataLake
+## NBADataLake
 This repository contains the setup_nba_data_lake.py script, which automates the creation of a data lake for NBA analytics using AWS services. The script integrates Amazon S3, AWS Glue, and Amazon Athena, and sets up the infrastructure needed to store and query NBA-related data.
 
-Overview
+## Overview
 The setup_nba_data_lake.py script performs the following actions:
 
 Creates an Amazon S3 bucket to store raw and processed data. Uploads sample NBA data (JSON format) to the S3 bucket. Creates an AWS Glue database and an external table for querying the data. Configures Amazon Athena for querying data stored in the S3 bucket.
 
-Prerequisites
+## Prerequisites
 Before running the script, ensure you have the following:
 
 Go to Sportsdata.io and create a free account At the top left, you should see "Developers", if you hover over it you should see "API Resources" Click on "Introduction & Testing"
@@ -27,7 +27,7 @@ IAM Role/Permissions: Ensure the user or role running the script has the followi
 
 S3: s3:CreateBucket, s3:PutObject, s3:DeleteBucket, s3:ListBucket Glue: glue:CreateDatabase, glue:CreateTable, glue:DeleteDatabase, glue:DeleteTable Athena: athena:StartQueryExecution, athena:GetQueryResults
 
-START HERE
+## START HERE
 Step 1: Open CloudShell Console
 Go to aws.amazon.com & sign into your account
 
@@ -102,7 +102,7 @@ WHERE Position = 'PG';
 
 
 
-What We Learned
+## What I Learned
 Securing AWS services with least privilege IAM policies.
 Automating the creation of services with a script.
 Integrating external APIs into cloud-based workflows.
